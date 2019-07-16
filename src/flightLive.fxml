@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller2">
+   <children>
+      <Pane fx:id="pane3D" layoutX="322.0" layoutY="-1.0" prefHeight="600.0" prefWidth="478.0" />
+      <GridPane fx:id="gridPane2D" layoutX="14.0" layoutY="51.0" prefHeight="199.0" prefWidth="288.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="130.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="133.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="81.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ComboBox fx:id="paysDepart" onAction="#paysDepEvent" prefWidth="150.0" promptText="Pays" GridPane.rowIndex="1" />
+            <ComboBox fx:id="paysDest" onAction="#paysDestEvent" prefWidth="150.0" promptText="Pays" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="villeDepart" onAction="#villeDepEvent" prefWidth="150.0" promptText="Ville" GridPane.rowIndex="2" />
+            <ComboBox fx:id="villeDest" onAction="#villeDestEvent" prefWidth="150.0" promptText="Ville" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="aeroportDepart" onAction="#aeroDepEvent" prefWidth="150.0" promptText="Aeroport" GridPane.rowIndex="3" />
+            <ComboBox fx:id="aeroportDest" onAction="#aeroDestEvent" prefWidth="150.0" promptText="Aeroport" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="origine" prefHeight="26.0" prefWidth="88.0" text="Origine" />
+            <TextField fx:id="destination" text="Destination" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Button fx:id="valide" layoutX="41.0" layoutY="311.0" mnemonicParsing="false" onAction="#rechercherVols" prefHeight="26.0" prefWidth="207.0" text="Recherche vols" />
+      <Button fx:id="butRetour" layoutX="22.0" layoutY="23.0" mnemonicParsing="false" onAction="#retourEvent" text="Retour" />
+      <ListView fx:id="listV" layoutX="107.0" layoutY="232.0" onMouseClicked="#afficherDetailVol" prefHeight="332.0" prefWidth="270.0" />
+      <Pane fx:id="paneVol" layoutX="22.0" layoutY="413.0" prefHeight="175.0" prefWidth="280.0" />
+   </children>
+</AnchorPane>
